@@ -35,7 +35,7 @@ def info_subject():
 
 ############################# General definitions ##############################
 ##folders to store the data (they are expected to excist!)
-data_Subject_Dir = my_path + 'data_EEG_patients/'
+data_Subject_Dir = my_path + 'data_EEG/'
 stimDict_path = my_path + 'PP/data_stimdict/'
 data_preproc_path = my_path + 'PP/data_preproc/'
 data_epochs_path = my_path + 'PP/data_epochs/'
