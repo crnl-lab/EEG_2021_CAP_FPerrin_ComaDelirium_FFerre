@@ -16,7 +16,7 @@ this file gives general settings for the study 'Early Evocked'
 
 my_path = 'H:/Delirium/GitLab/DELIRIUM_PROJECT/DELIRIUM_ANALYSIS/'
 
-csv_path = my_path + 'PP_TpAP_csv.csv'
+csv_path = my_path + 'PP.csv'
 df = pd.read_csv(csv_path ,sep=",", keep_default_na=False)
 all_subjects=[]
 id_patient=[]
@@ -35,20 +35,20 @@ def info_subject():
 
 ############################# General definitions ##############################
 ##folders to store the data (they are expected to excist!)
-data_Subject_Dir = my_path + 'data_EEG_patients/'
-stimDict_path = my_path + 'PP_TpAP/data_stimdict/'
-data_preproc_path = my_path + 'PP_TpAP/data_preproc/'
-data_epochs_path = my_path + 'PP_TpAP/data_epochs/'
-data_evoked_path = my_path + 'PP_TpAP/data_evoked/'
-plot_topo_path = my_path + 'PP_TpAP/plots/Topomap/'
-plot_erp_path = my_path + 'PP_TpAP/plots/ERP/'
-plot_stats_path = my_path + 'PP_TpAP/plots/stats/'
-data_stats_path = my_path + 'PP_TpAP/stats/'
-text_stats_path = my_path + 'PP_TpAP/stats/'
-cleaning_path = my_path + 'PP_TpAP/plots/cleaning/'
-data_grandaverage_path = my_path + 'PP_TpAP/data_grandaverage/'
-plot_grandaverage_path = my_path + 'PP_TpAP/plots/grandaverage/'
-plot_GFP_path = my_path + 'PP_TpAP/plots/GFP/'
+data_Subject_Dir = my_path + 'data_EEG/'
+stimDict_path = my_path + 'PP/data_stimdict/'
+data_preproc_path = my_path + 'PP/data_preproc/'
+data_epochs_path = my_path + 'PP/data_epochs/'
+data_evoked_path = my_path + 'PP/data_evoked/'
+plot_topo_path = my_path + 'PP/plots/Topomap/'
+plot_erp_path = my_path + 'PP/plots/ERP/'
+plot_stats_path = my_path + 'PP/plots/stats/'
+data_stats_path = my_path + 'PP/stats/'
+text_stats_path = my_path + 'PP/stats/'
+cleaning_path = my_path + 'PP/plots/cleaning/'
+data_grandaverage_path = my_path + 'PP/data_grandaverage/'
+plot_grandaverage_path = my_path + 'PP/plots/grandaverage/'
+plot_GFP_path = my_path + 'PP/plots/GFP/'
 
 data_evoked_group_path = my_path + 'PP_TpAP/data_evoked_group/'
 plot_evoked_group_path = my_path + 'PP_TpAP/plots/evoked_group/'
@@ -75,12 +75,6 @@ proj_name = 'Delirium_PP'
 highpass = 0.5
 highcut = 25
 
-#exemptions:
-#cut in specific place:
-i_start_TWB1 = float(4750)
-i_stop_TWB1 = float(5700)
-i_start_TPC2 = float(2050)
-i_stop_TPC2 = float(3000)
 
 ########### For epoching
 # Initial rejection setting
@@ -106,16 +100,16 @@ erp_topo = True
 
 
 #for stats
-alphaClusterP = 0.01 #should be 0.001
-p_accept = 0.05 #should be 0,05
-permutations = 1000 #should be 10000
+alphaClusterP = 0.01 #could be 0.001
+p_accept = 0.05 
+permutations = 1000 #could be 10000
 
 
 
 ################################## ERP params ##################################
 
 ## For the stimuli dictionary (names of stimuli given automatically vs ones we gave the stimuli)
-nameStimDict = my_path + 'PP_TpAP/data_stimdict/'
+nameStimDict = my_path + 'PP/data_stimdict/'
 #nameStimDict = './PP/data_stimdict/'
 nameStim_prefix = 'event_id.npy'
 
@@ -139,7 +133,7 @@ all_conditions  = { 'PP' : ["PP"],
 ## Topo times ###
 topo_times = np.arange(0., 1.2, 0.2)
 
-csv_stats_textfile = my_path + 'PP_TpAP/stats/SpatTempTstats_GrandAverage.csv'
+csv_stats_textfile = my_path + 'PP/stats/SpatTempTstats_GrandAverage.csv'
 
 ##GrandAverage stats
 GA_alphaClusterP = 0.01
