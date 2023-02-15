@@ -81,46 +81,13 @@ def run_on_group():
         evoked_names = cfg.data_grandaverage_path + suffix + '.npy'
         st.perm_SpatTemp_Ttest_GrandAverage(protocol,evoked_names, data_evoked_path, cfg.text_stats_path, cfg.plot_stats_path, subjects, cond1, cond2, cfg.csv_stats_textfile, suffix)
 
-
-    if protocol == 'LG':
-
-        import config_LG as cfg
-        cond1 = "LS"
-        cond2 = "LD"
+    if protocol == 'PP':
+        import config_PP as cfg
+        cond1 = "PP"
+        cond2 = "AP"
         evoked_names = cfg.data_grandaverage_path + suffix + '.npy'
         st.perm_SpatTemp_Ttest_GrandAverage(protocol,evoked_names, data_evoked_path, cfg.text_stats_path, cfg.plot_stats_path, subjects, cond1, cond2, cfg.csv_stats_textfile, suffix)
 
-        cond1 = "GS"
-        cond2 = "GD"
-        evoked_names = cfg.data_grandaverage_path + suffix + '.npy'
-        st.perm_SpatTemp_Ttest_GrandAverage(protocol,evoked_names, data_evoked_path, cfg.text_stats_path, cfg.plot_stats_path, subjects, cond1, cond2, cfg.csv_stats_textfile, suffix)
-
-        '''
-        cond1 = "LSGS"
-        cond2 = "LSGD"
-        evoked_names = cfg.data_grandaverage_path + suffix + '.npy'
-        st.perm_SpatTemp_Ttest_GrandAverage(protocol,evoked_names, data_evoked_path, cfg.text_stats_path, cfg.plot_stats_path, subjects, cond1, cond2, cfg.csv_stats_textfile, suffix)
-
-        cond1 = "LDGS"
-        cond2 = "LDGD"
-        evoked_names = cfg.data_grandaverage_path + suffix + '.npy'
-        st.perm_SpatTemp_Ttest_GrandAverage(protocol,evoked_names, data_evoked_path, cfg.text_stats_path, cfg.plot_stats_path, subjects, cond1, cond2, cfg.csv_stats_textfile, suffix)
-
-        cond1 = "LSGS"
-        cond2 = "LDGS"
-        evoked_names = cfg.data_grandaverage_path + suffix + '.npy'
-        st.perm_SpatTemp_Ttest_GrandAverage(protocol,evoked_names, data_evoked_path, cfg.text_stats_path, cfg.plot_stats_path, subjects, cond1, cond2, cfg.csv_stats_textfile, suffix)
-
-        cond1 = "LSGD"
-        cond2 = "LDGD"
-        evoked_names = cfg.data_grandaverage_path + suffix + '.npy'
-        st.perm_SpatTemp_Ttest_GrandAverage(protocol,evoked_names, data_evoked_path, cfg.text_stats_path, cfg.plot_stats_path, subjects, cond1, cond2, cfg.csv_stats_textfile, suffix)
-
-        cond1 = "LSGS"
-        cond2 = "LDGD"
-        evoked_names = cfg.data_grandaverage_path + suffix + '.npy'
-        st.perm_SpatTemp_Ttest_GrandAverage(protocol,evoked_names, data_evoked_path, cfg.text_stats_path, cfg.plot_stats_path, subjects, cond1, cond2, cfg.csv_stats_textfile, suffix)
-        '''
 
 ################################## What to run #################################
 
