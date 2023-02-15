@@ -84,8 +84,7 @@ if __name__ == '__main__' :
 
     print('MNE VERSION : ', mne.__version__)
 
-    #data_grandaverage_path = './../DELIRIUM_PROJECT/DELIRIUM_ANALYSIS/MATHS_NOBAD/data_grandaverage/'
-    data_grandaverage_path = 'G:/Delirium/GitLab/DELIRIUM_PROJECT/DELIRIUM_ANALYSIS/WORDS/data_grandaverage/'
+    data_grandaverage_path = mypath + 'WORDS/data_grandaverage/'
     name = 'GrandAverage.npy'
     all_subjects = data_grandaverage_path + name
 
